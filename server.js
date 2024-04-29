@@ -22,7 +22,6 @@ app.get('/authorizeDexcomUser', (req, res) => {
         redirect: 'follow'
     };
 
-    console.log(process.env.DEXCOM_API_ENVIRONMENT);
     fetch(`https://`+process.env.DEXCOM_API_ENVIRONMENT+`/v2/oauth2/token`, requestOptions) //Fetch sandbox dev token
         .then(response => response.json())
         .then((response) => {
