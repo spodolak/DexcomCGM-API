@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const dotenv = require('dotenv');
 dotenv.config();
+const cors = require('cors'); // Import the cors package
 
 //Define CORS options
 const corsOpions = {
