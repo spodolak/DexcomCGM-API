@@ -7,7 +7,7 @@ const cors = require('cors');
 //Define CORS options
 const corsOpions = {
     credentials: true,
-    origin: ['http://localhost:3000', '*'] //whitelisted domains,  local and heroku
+    origin: '*' //whitelisted domains,  local and heroku
 }
 app.use(cors(corsOpions)); //cors middleware
 
