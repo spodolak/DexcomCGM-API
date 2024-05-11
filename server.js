@@ -3,6 +3,13 @@ const app = express();
 const dotenv = require('dotenv');
 dotenv.config();
 
+//Define CORS options
+const corsOpions = {
+    credentials: true,
+    origin: ['http://localhost:3000', 'https://diabetic-mood-ring-front-end-7190da4f9707.herokuapp.com/'] //whitelisted domains,  local and heroku
+}
+app.use(cors(corsOpions)); //cors middleware
+
 app.get('/authorizeDexcomUser', (req, res) => {
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
