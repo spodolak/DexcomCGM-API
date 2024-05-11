@@ -2,12 +2,12 @@ const express = require('express');
 const app = express();
 const dotenv = require('dotenv');
 dotenv.config();
-const cors = require('cors'); // Import the cors package
+const cors = require('cors');
 
 //Define CORS options
 const corsOpions = {
     credentials: true,
-    origin: ['http://localhost:3000', 'https://diabetic-mood-ring-front-end-7190da4f9707.herokuapp.com/'] //whitelisted domains,  local and heroku
+    origin: ['http://localhost:3000', '*'] //whitelisted domains,  local and heroku
 }
 app.use(cors(corsOpions)); //cors middleware
 
